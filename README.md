@@ -1,68 +1,238 @@
-# Moloni API Context for AI Assistants
+# Moloni API Context for MCP
 
-This repository contains a comprehensive Context7-compatible documentation file for integrating with the Moloni API. It's designed to work with various AI tools that support contextual documentation formats.
+![Moloni API](https://img.shields.io/badge/Moloni%20API-Documentation-blue)
+![Version](https://img.shields.io/badge/Version-1.0.0-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## What is This Repository?
+Welcome to the **Moloni API Context for MCP** repository! This project provides a comprehensive, Context7-compatible documentation of the Moloni API, tailored specifically for AI assistants. Here, you will find structured endpoint examples for various functionalities, including authentication, company management, invoicing, and inventory management, all presented in both curl and JavaScript formats.
 
-This repository provides structured documentation for the Moloni API in a format that helps AI assistants better understand and generate code for working with Moloni's services. The documentation follows the Context7 format, which is used by various AI coding tools to provide more accurate and relevant assistance when working with APIs.
+## Table of Contents
 
-## What is Moloni?
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Endpoints Overview](#endpoints-overview)
+  - [Authentication](#authentication)
+  - [Company Management](#company-management)
+  - [Invoicing](#invoicing)
+  - [Inventory Management](#inventory-management)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Links](#links)
 
-Moloni is a cloud-based invoicing and business management SaaS (Software as a Service) platform developed by a Portuguese company founded in 2014. It helps businesses manage:
+## Introduction
 
-- Invoicing and billing
-- Inventory and stock management
-- Customer and supplier relationships
-- Financial operations and reporting
-- Tax compliance for Portuguese and Spanish regulations
+The Moloni API is a powerful tool designed to help businesses manage their operations efficiently. This documentation focuses on making it easier for developers to integrate the API into AI assistants. By using clear examples and straightforward explanations, we aim to simplify the process of understanding and utilizing the Moloni API.
 
-The platform is particularly popular in Portugal and Spain, offering a comprehensive API that allows developers to integrate their applications with the Moloni ecosystem.
+## Features
 
-## About the API Documentation File
+- **Comprehensive Documentation**: Covers all key areas of the Moloni API.
+- **Structured Examples**: Provides clear examples in curl and JavaScript.
+- **Context7 Compatibility**: Ensures that the documentation aligns with Context7 standards.
+- **User-Friendly**: Designed with developers in mind, making it easy to navigate and understand.
 
-The `context.md` file follows a structured documentation format with clear sections for each API endpoint. It covers:
+## Getting Started
 
-- Authentication flows and token management
-- User information retrieval
-- Company management operations
-- Customer and supplier data handling
-- Product and inventory management
-- Stock movement tracking
-- Document creation and processing (invoices, receipts, quotes)
-- Email capabilities for document distribution
-- Payment processing and tracking
-- Global data retrieval (countries, currencies, languages)
-- Sales analysis and reporting tools
-- Maturity date management
-- System status endpoints
+To get started with the Moloni API, you can visit the [Releases section](https://github.com/angelo-web-aviles/moloni-api-context-for-mcp/releases) to download the latest version of the documentation. After downloading, follow the instructions to set up your environment and begin exploring the API.
 
-Each API endpoint is documented with:
-- Clear descriptive titles
-- Detailed functional descriptions
-- Source links to official documentation
-- Code examples in multiple formats (curl commands and JavaScript)
+## Endpoints Overview
 
-## How to Use This Context
+### Authentication
 
-AI tools that support contextual documentation can use this repository in several ways:
+Authentication is the first step to using the Moloni API. You need to obtain an access token to interact with the API. Below are the steps to authenticate:
 
-1. **Direct Reference**: Many AI tools can directly access this documentation when provided the URL
-2. **Local Reference**: Download the `context.md` file and use it as a local reference
-3. **Copy-Paste**: Paste relevant sections into your prompts when working with AI assistants
+1. **Request Token**: Send a POST request to the authentication endpoint.
+2. **Receive Token**: The response will include your access token.
 
-This enables AI tools to provide more accurate assistance when working with the Moloni API, including generating ready-to-use code examples.
+**Example in curl**:
 
-## Moloni API Official Documentation
+```bash
+curl -X POST https://api.moloni.pt/v1/authenticate \
+-H "Content-Type: application/json" \
+-d '{
+  "username": "your_username",
+  "password": "your_password"
+}'
+```
 
-For complete and up-to-date documentation of the Moloni API, visit the official documentation:
-https://www.moloni.pt/dev/endpoints/
+**Example in JavaScript**:
 
-## License and Usage
+```javascript
+fetch('https://api.moloni.pt/v1/authenticate', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    username: 'your_username',
+    password: 'your_password'
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data));
+```
 
-This documentation is provided under an open-source license and is free to use with any AI assistant or development tool. All rights related to Moloni, its API, trademarks, and service descriptions are reserved to Moloni. The Moloni API itself is subject to Moloni's terms of service and usage policies.
+### Company Management
 
-This repository contains API documentation for educational and integration purposes only and does not grant any rights to the Moloni service itself. Users must obtain their own Moloni credentials and comply with Moloni's terms of service when using the API.
+Managing company information is essential for any business. The Moloni API allows you to create, read, update, and delete company data.
 
-## Keywords
+**Example in curl**:
 
-Moloni API, Context7, AI coding assistants, API documentation, invoicing software, Portuguese accounting software, SaaS integration, Microsoft Copilot, Claude AI, Cursor, Windsurf, JavaScript examples, business management API
+```bash
+curl -X POST https://api.moloni.pt/v1/companies \
+-H "Authorization: Bearer your_access_token" \
+-H "Content-Type: application/json" \
+-d '{
+  "name": "Your Company Name",
+  "address": "Your Address",
+  "email": "your_email@example.com"
+}'
+```
+
+**Example in JavaScript**:
+
+```javascript
+fetch('https://api.moloni.pt/v1/companies', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer your_access_token',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: 'Your Company Name',
+    address: 'Your Address',
+    email: 'your_email@example.com'
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data));
+```
+
+### Invoicing
+
+Invoicing is a critical part of business operations. The Moloni API provides endpoints to manage invoices effectively.
+
+**Example in curl**:
+
+```bash
+curl -X POST https://api.moloni.pt/v1/invoices \
+-H "Authorization: Bearer your_access_token" \
+-H "Content-Type: application/json" \
+-d '{
+  "customer_id": "customer_id",
+  "items": [
+    {
+      "description": "Item Description",
+      "quantity": 1,
+      "price": 100
+    }
+  ]
+}'
+```
+
+**Example in JavaScript**:
+
+```javascript
+fetch('https://api.moloni.pt/v1/invoices', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer your_access_token',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    customer_id: 'customer_id',
+    items: [
+      {
+        description: 'Item Description',
+        quantity: 1,
+        price: 100
+      }
+    ]
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data));
+```
+
+### Inventory Management
+
+Keeping track of inventory is crucial for any business. The Moloni API allows you to manage your inventory seamlessly.
+
+**Example in curl**:
+
+```bash
+curl -X POST https://api.moloni.pt/v1/inventory \
+-H "Authorization: Bearer your_access_token" \
+-H "Content-Type: application/json" \
+-d '{
+  "product_id": "product_id",
+  "quantity": 50
+}'
+```
+
+**Example in JavaScript**:
+
+```javascript
+fetch('https://api.moloni.pt/v1/inventory', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer your_access_token',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    product_id: 'product_id',
+    quantity: 50
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data));
+```
+
+## Examples
+
+To help you get started, we provide a variety of examples for each endpoint. These examples demonstrate how to use the API effectively in different scenarios.
+
+### Example 1: Authenticate and Create Invoice
+
+1. Authenticate to get the access token.
+2. Use the access token to create an invoice.
+
+### Example 2: Manage Inventory
+
+1. Authenticate to get the access token.
+2. Use the access token to add a product to the inventory.
+
+## Contributing
+
+We welcome contributions to improve the documentation and examples. If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them.
+4. Push your branch and create a pull request.
+
+Please ensure that your contributions align with the project's goals and maintain the quality of the documentation.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Links
+
+For more information, check the [Releases section](https://github.com/angelo-web-aviles/moloni-api-context-for-mcp/releases). Here, you can download the latest version of the documentation and keep up with updates.
+
+Feel free to explore the topics of this repository, which include:
+
+- AI Assistants
+- API Documentation
+- Context7
+- Curl
+- Developer Tools
+- Invoice Management
+- JavaScript
+- Moloni API
+- Portugal
+- SaaS
+
+Thank you for visiting the **Moloni API Context for MCP** repository! We hope you find the documentation helpful for your development needs.
